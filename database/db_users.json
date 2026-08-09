@@ -1,0 +1,16 @@
+[
+  {
+    "username": "demo_user",
+    "email": "demo@hmstyle.test",
+    "password": "[bcrypt hashed - stored in MongoDB]",
+    "createdAt": "2026-08-09T00:00:00.000Z",
+    "note": "Demo account. Login credentials: demo@hmstyle.test / Demo1234"
+  },
+  {
+    "username": "revital2345",
+    "email": "revital2345@gmail.com",
+    "password": "[bcrypt hashed - stored in MongoDB]",
+    "createdAt": "2026-08-09T00:00:00.000Z",
+    "note": "Test account created during testing"
+  }
+]
