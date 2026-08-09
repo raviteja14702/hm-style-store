@@ -49,12 +49,12 @@ app.use('/api/auth',     authRoutes);
 app.use('/api/cart',     cartRoutes);
 app.use('/api/contact',  contactRoutes);
 
-const path = require('path');
 app.use(require('express').static(path.join(__dirname, 'build')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html')));
 app.listen(PORT, () => {
   console.log(`API Server running at http://localhost:${PORT}`);
   console.log('Database: Local MongoDB (process.env.MONGO_URI)');
 });
+
 
 
