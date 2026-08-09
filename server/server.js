@@ -21,7 +21,7 @@ const app  = express();
 const PORT = 5000;
 
 // Local MongoDB connection - no internet needed
-const MONGO_URI = 'process.env.MONGO_URI';
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log('Connected to local MongoDB'))
@@ -56,4 +56,5 @@ app.listen(PORT, () => {
   console.log(`API Server running at http://localhost:${PORT}`);
   console.log('Database: Local MongoDB (process.env.MONGO_URI)');
 });
+
 
