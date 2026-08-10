@@ -39,7 +39,7 @@ app.use(session({
   secret: 'hmstyle_secret_key_2024',
   resave: false,
   saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: MONGO_URI }),
+  store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
   cookie: { maxAge: 1000 * 60 * 60 * 24, sameSite: 'lax', httpOnly: true }
 }));
 
@@ -55,6 +55,7 @@ app.listen(PORT, () => {
   console.log(`API Server running at http://localhost:${PORT}`);
   console.log('Database: Local MongoDB (process.env.MONGO_URI)');
 });
+
 
 
 
